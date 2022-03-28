@@ -1,0 +1,34 @@
+import { css } from "styled-components";
+
+const theme = {
+    colors: {
+        clrAccent: "#FF8A35",
+        bgDark: "#171717",
+        bgLight: "#202020",
+        textLight: "#f4f4f4",
+        textDark: "#626262",
+        lightButton: "#303030",
+    },
+    fontStacks: {
+        primaryFontStack: "'Roboto', sans-serif",
+        secondaryFontStack: "'Barlow', sans-serif",
+    },
+    breakPoints: {
+        tablet: "768px",
+        mobile: "420px"
+    },
+    containers: {
+        lg:  css`
+            width: 90%;
+            max-width: 1800px;
+            margin: 0 auto;
+        `,
+        sm: css`
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        `,
+    }
+};
+
+export default theme;
