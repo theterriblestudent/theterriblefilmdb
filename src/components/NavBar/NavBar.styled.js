@@ -10,6 +10,7 @@ export const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     z-index: 3;
+    transition: background 0.5s;
 `;
 
 export const StyledLogo = styled.img`

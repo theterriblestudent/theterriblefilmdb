@@ -20,7 +20,7 @@ function HeroMovieInfo({heroMovie}) {
                 </StyledButton>
                 <StyledButton large btnColor={theme.colors.bgLight}>
                     <BsPlusLg color={theme.colors.clrAccent} />
-                    Wishlist
+                    Watchlist
                 </StyledButton>
             </HeroMovieButtons>
         </StyledMovieInfo>

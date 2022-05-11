@@ -1,5 +1,6 @@
 import React from 'react';
-import {HeroSection, TrendingSection} from 'pages/Home/components';
+import {HeroSection, TrendingSection, UpcomingSection, WatchlistSection} from 'pages/Home/components';
+import {NowShowingSection} from 'pages/Home/components';
 import {Fragment} from 'react';
 
 function Home () {
@@ -7,6 +8,9 @@ function Home () {
         <Fragment >
             <HeroSection />
             <TrendingSection />
+            <UpcomingSection />
+            <WatchlistSection />
+            <NowShowingSection />
         </Fragment>
     );
 }

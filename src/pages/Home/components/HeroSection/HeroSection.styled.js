@@ -7,5 +7,6 @@ export const StyledHeroSection = styled.section`
     background-color: gray;
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         height: 60vh;
+        margin-bottom: 35px;
     }
 `;

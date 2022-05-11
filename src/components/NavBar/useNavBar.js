@@ -9,6 +9,16 @@ const useNavBar = function(){
     const theme = useTheme();
     const navigate = useNavigate();
     const [isSideNavOpen, setIsSideNavOpen] = React.useState(false);
+    const nav = React.useRef();
+
+    React.useLayoutEffect(() => {
+        document.addEventListener('scroll', () => {
+          if(window.scrollY > 50)
+            nav.current.style.background = 'black';
+          else
+          nav.current.style.background = 'transparent';
+        });
+      }, []);
 
     function handleNavLinkClick (event) {
         resetLinkStyles()
@@ -50,7 +60,7 @@ const useNavBar = function(){
         )
     }
 
-    return { navigateHome, handleBurgerClick, getLinks };
+    return { navigateHome, handleBurgerClick, getLinks, nav };
 };
 
 export default useNavBar;

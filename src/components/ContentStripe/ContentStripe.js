@@ -4,15 +4,15 @@ import {StyledContentStripe, Title, StyledControlsContainer,
 import composeHooks from 'react-hooks-compose';
 import useContentStripe from './useContentStripe';
     
-function ContentStripe ({getTabs, controlStyles, getContent, id}) {
+function ContentStripe ({data, getTabs, titleText, scrollLeft, scrollRight, getContent, id, scrollableContainer, title, buttonsRef}){
     return (
         <StyledContentStripe>
-            <Title title="Trending Today" getTabs={getTabs} hasMore />
-            <StyledControlsContainer>
-                <LeftScrollButton />
-                <RightScrollButton />
-                <StyledContentStripeContainer id={id}>
-                    {getContent()}                    
+            <Title buttonsRef={buttonsRef} title={title ? title : getTabs && getTabs()[0].title} titleText={titleText} getTabs={getTabs} hasMore />
+            <StyledControlsContainer id={id}>
+                <LeftScrollButton onClick={() => scrollLeft()} />
+                <RightScrollButton onClick={() => scrollRight()} />
+                <StyledContentStripeContainer ref={scrollableContainer}>
+                    {getContent(data)}                    
                 </StyledContentStripeContainer>       
             </StyledControlsContainer>
         </StyledContentStripe>

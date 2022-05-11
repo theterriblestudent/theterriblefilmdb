@@ -1,3 +1,3 @@
 import useFetch from './useFetch';
-
-export {useFetch};
+import useFetchMedia from './useFetchMedia';
+export {useFetch, useFetchMedia};

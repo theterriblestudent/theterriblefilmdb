@@ -3,8 +3,13 @@ import {ContentStripe} from 'components';
 import composeHooks from 'react-hooks-compose';
 import useTrendingSection from './useTrendingSection';
 
-function TrendingSection ({ getContent, getTabs, id="" }) {
-  return (<ContentStripe getContent = { getContent } id = {id} getTabs={getTabs}/>);
+ function TrendingSection({data, getContent, getTabs,titleText, buttonsRef} ) {
+  if (document.documentElement.clientWidth > 768)
+    return <ContentStripe buttonsRef={buttonsRef}  titleText={titleText} getContent = { getContent } getTabs={ getTabs } />;
+  else
+    return getTabs().map((tab, index) => {
+      return <ContentStripe titleText={titleText} getContent = { getContent } key={ index } title = {tab.title} data={ data[index]} getTabs={() => [tab]} />;
+    })
 };
 
 export default composeHooks( { useTrendingSection } ) (TrendingSection);

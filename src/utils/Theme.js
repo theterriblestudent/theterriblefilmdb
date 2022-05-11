@@ -6,8 +6,8 @@ const theme = {
         bgDark: "#171717",
         bgLight: "#202020",
         textLight: "#f4f4f4",
-        textDark: "#626262",
-        lightButton: "#303030",
+        textDark: "#b8b8b8",
+        lightButton: "#505050",
     },
     fontStacks: {
         primaryFontStack: "'Roboto', sans-serif",

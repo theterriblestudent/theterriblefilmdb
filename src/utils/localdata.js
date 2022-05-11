@@ -13,6 +13,18 @@ const movies = [
 
     },
     {
+        title: "Doctor Strange in the Multiverse of Madness",
+        trailer: "",
+        logo: "https://lumiere-a.akamaihd.net/v1/images/pp_doctorstrangeinthemultiverseofmadness_logo_22369_8f67633f.png",
+        poster: "https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_FMjpg_UX1000_.jpg",
+        backdrop: "https://www.indiewire.com/wp-content/uploads/2022/05/KTH1650_comp_v034.1045_R.jpg",
+        synopsis: "Dr Stephen Strange casts a forbidden spell that opens a portal to the multiverse. However, a threat emerges that may be too big for his team to handle.",
+        releaseYear: "2022",
+        rating: "PG-13",
+        score: 7.5,
+        runtime: "2h 6m"
+    },
+    {
         title: "Star Wars: The Last Jedi",
         trailer: "Q0CbN8sfihY",
         poster: "https://cdn.shopify.com/s/files/1/0747/3829/products/mL0291_1024x1024.jpg?v=1571444811",

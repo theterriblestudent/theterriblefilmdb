@@ -4,6 +4,7 @@ import {FaChevronCircleRight, FaChevronCircleLeft} from 'react-icons/fa';
 export const StyledContentStripe = styled.div`
     position: relative;
     top: -150px;
+    margin-bottom: clamp(1.875rem, 1.09375rem + 2.5vw, 2.8125rem);;
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         top: 0;
     } 
@@ -13,10 +14,12 @@ export const StyledControlsContainer = styled.div`
     width: 100%;
     padding: auto 5%;
     position: relative;
+    margin-top: clamp(0.3125rem, -0.7291666666666667rem + 3.3333333333333335vw, 1.5625rem);
 `;
 
 export const StyledContentStripeContainer = styled.div`
-    width: 100%;
+    width: calc(100% - 12px);
+    margin: auto;
     padding: 15px 5%;
     overflow-x: scroll;
     position: relative;
@@ -24,7 +27,9 @@ export const StyledContentStripeContainer = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     min-height: 180px;
-    gap: 40px;
+    scroll-behavior: smooth;
+    gap: 1.25rem;
+    gap: clamp(1.25rem, 0.7291666666666666rem + 1.6666666666666667vw, 1.875rem);
     align-items: flex-start;
     &::-webkit-scrollbar {display: none;}
 `;
@@ -36,7 +41,11 @@ export const ControlCommonStyles = css`
     transition: transform 0.5s;
     position: absolute;
     cursor: pointer;
+    z-index: 5;
     top: 50%;
+    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+        display: none;
+    }
 `;
 
 export const LeftScrollButton = styled(FaChevronCircleLeft)`

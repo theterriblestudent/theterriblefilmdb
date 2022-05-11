@@ -19,7 +19,7 @@ function useFetch(url, limit="") {
       .then(response => response.json())
       .then(data => {
       if (pageNumber === data.total_pages) setHasMore(false);
-      setData((prev_results => [...prev_results, data.results]));
+      setData((prev_results => [...prev_results, ...data.results]));
       console.log(data);
       })
       .catch(error => {

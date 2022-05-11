@@ -6,10 +6,10 @@ import { Logo } from 'assets';
 import composeHooks from 'react-hooks-compose'
 import useNavBar from './useNavBar';
 
-function NavBar({ navigateHome, handleBurgerClick, getLinks}) {
+function NavBar({ navigateHome, handleBurgerClick, getLinks, nav}) {
     return (
         <Fragment>
-            <StyledNav >
+            <StyledNav ref={nav}>
                 <StyledLogo src={Logo} onClick={navigateHome}/>
                 <StyledNavLinks>{getLinks()}</StyledNavLinks>
                 <StyledMobileNav>
