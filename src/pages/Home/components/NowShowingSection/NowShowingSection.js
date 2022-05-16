@@ -1,4 +1,3 @@
-import React from 'react'
 import {ContentStripe} from 'components';
 import useNowShowingSection from './useNowShowingSection';
 

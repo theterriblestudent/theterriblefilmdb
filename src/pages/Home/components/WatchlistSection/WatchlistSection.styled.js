@@ -28,5 +28,5 @@ export const StyledLoginText = styled.p`
     margin-bottom: 30px;
     line-height: 1.22;
     font-size: 1.1rem;
-    font-size: clamp(1.1rem, 0.9035714285714287rem + 0.6285714285714283vw, 1.375rem);
+    font-size: clamp(1.1rem, 0.9541666666666669rem + 0.4666666666666662vw, 1.275rem);
 `;

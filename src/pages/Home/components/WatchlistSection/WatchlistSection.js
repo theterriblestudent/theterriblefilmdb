@@ -12,7 +12,7 @@ function WatchlistSection() {
                 <StyledLoginText>
                     Please sign in to FilmDB to keep track of what you want to watch.
                 </StyledLoginText>
-                <StyledButton large btnColor={theme.colors.clrAccent}>
+                <StyledButton  btnColor={theme.colors.clrAccent}>
                     Log In
                 </StyledButton>
             </StyledWatchlistContainer>

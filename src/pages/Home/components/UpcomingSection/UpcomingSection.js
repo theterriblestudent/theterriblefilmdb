@@ -1,8 +1,7 @@
-import composeHooks from 'react-hooks-compose';
-import { ContentStripe } from 'components'
-import useUpcomingSection from './useUpcomingSection';
+import {MediaStripe} from 'pages/Home/components';
+import {generateCards} from 'utils/card-builders';
 
-function UpcomingSection( { getContent, titleRef }) {
-  return  <ContentStripe titleText={titleRef} getContent= { getContent } />;
+function UpcomingSection() {
+  return <MediaStripe title={"Upcoming Movies"} path={"movie/upcoming"} cardBuilder={generateCards} />;
 }
-export default composeHooks({ useUpcomingSection })(UpcomingSection);
+export default UpcomingSection;
