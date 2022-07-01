@@ -1,7 +1,8 @@
 import React from 'react';
-import {HeroSection, TrendingSection, UpcomingSection, WatchlistSection} from 'pages/Home/components';
+import {HeroSection, JoinSection, TrendingSection, UpcomingSection, WatchlistSection} from 'pages/Home/components';
 import {NowShowingSection, TopRatedMoviesSection, TopRatedTVSection} from 'pages/Home/components';
-import {PopularMoviesSection, PopularTVShowsSection} from 'pages/Home/components';
+import {PopularMoviesSection, PopularTVShowsSection /*, TopBoxOfficeSection */} from 'pages/Home/components';
+import {PopularPeopleSection} from 'pages/Home/components';
 import {Fragment} from 'react';
 
 function Home () {
@@ -16,6 +17,9 @@ function Home () {
             <TopRatedTVSection />
             <PopularMoviesSection />
             <PopularTVShowsSection />
+            {/* <TopBoxOfficeSection /> */}
+            <PopularPeopleSection />
+            <JoinSection />
         </Fragment>
     );
 }

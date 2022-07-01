@@ -16,6 +16,7 @@ export const StyledButton = styled.button`
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
+    text-decoration: none;
     &:hover { transform: scale(0.95);}
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         padding: ${props => props.large ? " 8px 18px" : "6px 16px"};

@@ -29,7 +29,7 @@ export const StyledContentStripeContainer = styled.div`
     min-height: 180px;
     scroll-behavior: smooth;
     gap: 1.25rem;
-    gap: clamp(1.25rem, 0.7291666666666666rem + 1.6666666666666667vw, 1.875rem);
+    gap: clamp(1.25rem, 0.45833333333333315rem + 2.533333333333334vw, 2.2rem);
     align-items: flex-start;
     &::-webkit-scrollbar {display: none;}
 `;

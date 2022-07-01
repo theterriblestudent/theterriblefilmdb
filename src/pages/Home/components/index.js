@@ -15,8 +15,11 @@ import MediaStripe from "./MediaStripe/MediaStripe";
 import TopRatedTVSection from "./TopRatedTVSection/TopRatedTVSection";
 import PopularMoviesSection from "./PopularMoviesSection/PopularMoviesSection";
 import PopularTVShowsSection from "./PopularTVShowsSection/PopularTVShowsSection";
+import TopBoxOfficeSection from "./TopBoxOfficeSection/TopBoxOfficeSection";
+import PopularPeopleSection from "./PopularPeopleSection/PopularPeopleSection";
+import JoinSection from "./JoinSection/JoinSection";
 
 export {StyledHeroSection, HeroSection, StyledBackground, Background, BackgroundImage, useHeroSection,
         useBackground, StyledMovieInfo, HeroMovieInfo, HeroMovieButtons, TrendingSection, UpcomingSection,
         WatchlistSection, NowShowingSection, TopRatedMoviesSection, MediaStripe, TopRatedTVSection,
-        PopularMoviesSection, PopularTVShowsSection};
+        PopularMoviesSection, PopularTVShowsSection, TopBoxOfficeSection, PopularPeopleSection, JoinSection};

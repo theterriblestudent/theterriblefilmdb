@@ -6,6 +6,7 @@ export const StyledMediaCard = styled.div`
     flex-basis: 360px;
     flex-shrink: 0;
     flex-grow: 0;
+    position: relative;
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         flex-basis: 180px;
         background: transparent;
@@ -16,6 +17,23 @@ export const StyledMediaCard = styled.div`
         border-radius: 5px 5px 0 0;
         @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
             border-radius: 8px;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: 2px solid ${props => props.theme.colors.bgLight};
+        width: 105%;
+        height: 105%;
+        z-index: -1;
+
+        @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+            display: none;
         }
     }
 `;
@@ -41,7 +59,7 @@ export const Title = styled.div `
     width: inherit;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: color 0.5s
+    transition: color 0.5s;
     &:hover {
         color: ${props => props.theme.colors.clrAccent};
     }

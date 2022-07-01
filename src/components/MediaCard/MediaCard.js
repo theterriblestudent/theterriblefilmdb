@@ -10,7 +10,7 @@ import {StyledMediaCard, StyledMediaInfo, Title, MobileReleaseDate} from './Medi
 
 function MediaCard(props) {
     const theme = useTheme();
-    const {getGenres} = useMediaCard(props.media_id, props.media_type);
+    const {getGenres, seeMoreInfo} = useMediaCard(props.media_id, props.media_type);
     return (
         <StyledMediaCard>
             <picture>
@@ -29,7 +29,7 @@ function MediaCard(props) {
                     <StyledButton btnColor={theme.colors.lightButton}>
                         <BsPlusLg color={theme.colors.clrAccent} /> Watchlist
                     </StyledButton>
-                    <StyledButton btnColor={theme.colors.bgDark}>
+                    <StyledButton btnColor={theme.colors.bgDark} onClick={() => seeMoreInfo()}>
                         <AiFillInfoCircle color={theme.colors.textLight} />  More Info
                     </StyledButton>
                 </Buttons>

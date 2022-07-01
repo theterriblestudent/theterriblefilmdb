@@ -20,7 +20,6 @@ function useFetch(url, limit="") {
       .then(data => {
       if (pageNumber === data.total_pages) setHasMore(false);
       setData((prev_results => [...prev_results, ...data.results]));
-      console.log(data);
       })
       .catch(error => {
          setHasError(true);
