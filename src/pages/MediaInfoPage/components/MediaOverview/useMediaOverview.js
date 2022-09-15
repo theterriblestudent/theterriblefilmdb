@@ -36,7 +36,7 @@ function useMediaOverview() {
 
     React.useEffect(() => {
         getRatings();
-    }, [ratingsContainer]);
+    }, [ratingsContainer, countryCode]);
 
 
     function getRatingsContainer(url) {
@@ -46,17 +46,20 @@ function useMediaOverview() {
     }
 
     function getRatings() {
-        if (ratingsContainer) {
-            if (media_type === 'tv') {
-                setAgeRating(ratingsContainer.results.find(result => result.iso_3166_1 === countryCode).certification ||
-                    ratingsContainer.results.find(result => result.iso_3166_1 === 'US').certification || 'NR');
-            }
-            else {
-                setAgeRating((ratingsContainer.results.find(result => result.iso_3166_1 === countryCode).release_dates.length > 0) ?
-                    ratingsContainer.results.find(result => result.iso_3166_1 === countryCode).release_dates[0].certification : 
-                    (ratingsContainer.results.find(result => result.iso_3166_1 === 'US').release_dates.length > 0) ? 
-                    (ratingsContainer.results.find(result => result.iso_3166_1 === 'US').release_dates[0].certification) : 'NR'
-                );
+        let region_data;
+        if (ratingsContainer && countryCode) {
+            if (ratingsContainer.results.length > 0) {
+                region_data = ratingsContainer.results.find(e => e.iso_3166_1 === countryCode) ||
+                    ratingsContainer.results.find(e => e.iso_3166_1 === 'US') ||
+                    ratingsContainer.results[0];
+
+                    if (media_type === 'movie') {
+                        if (region_data.release_dates.length > 0) {
+                            setAgeRating(region_data.release_dates[0].certification || 'NR');
+                        }
+                    } else if (media_type === 'tv') {
+                        setAgeRating(region_data.rating || 'NR');
+                    }
             }
         }
 
