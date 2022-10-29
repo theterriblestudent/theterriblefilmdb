@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import { AiFillPropertySafety } from 'react-icons/ai';
+import styled, { css } from 'styled-components';
 
 export const StyledButton = styled.button`
     padding: ${props => props.large ? "11px 22px" : "8px 18px"};
-    border-radius: ${props => props.outlined ? '100px' : '5px'};
+    border-radius: ${props => props.outlined ? '8px' : '5px'};
     border: 2px solid ${props => props.btnColor};
     font-family: ${props => props.outlined ? props.theme.fontStacks.primaryFontStack : props.theme.fontStacks.secondaryFontStack};
     font-weight: 600;
@@ -18,6 +19,22 @@ export const StyledButton = styled.button`
     flex-shrink: 0;
     text-decoration: none;
     &:hover { transform: scale(0.95);}
+
+    @media only screen and (max-width: ${props => props.theme.breakPoints.mobile}) {
+        ${props => {
+            if (props.shrink) {
+                return css`
+                    background: transparent;
+                    border-color: ${props.theme.colors.textDark};
+                    padding: 0;
+                `;
+            }
+        }}
+        p {
+            display: ${props => props.shrink ? 'none' : 'initial'};
+        }
+    }
+
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         padding: ${props => props.large ? " 8px 18px" : "6px 16px"};
     }

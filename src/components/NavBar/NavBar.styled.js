@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 export const StyledNav = styled.nav`
     position: fixed;
     width: 100vw;
-    padding: 10px 5%;
+    padding: 25px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,7 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledLogo = styled.img`
-    width: clamp(90px, 6.25vw, 120px);
+    width: clamp(150px, 10.42vw, 200px);
     height: auto;
     margin-right: 35px;
     cursor: pointer;
@@ -23,12 +23,11 @@ export const StyledLogo = styled.img`
 export const StyledNavLinks = styled.ul`
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 32px;
     justify-content: flex-start;
     align-self: center;
     align-items: center;
     flex: 1;
-    padding-top: 15px;
     height: 100%;
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {display: none}
 `;
@@ -39,7 +38,7 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
     transition: color 0.5s;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.1875rem;
     &:hover {color: ${props => props.theme.colors.clrAccent}}
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         text-transform: uppercase;

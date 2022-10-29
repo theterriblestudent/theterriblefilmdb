@@ -17,7 +17,7 @@ export const StyledRating = styled.div`
     justify-content:center;
     gap: 5px;
 
-    h1 {
+    h4 {
         font-size: clamp(1.2rem, 0.9846rem + 0.9846vw, 1.6rem);
         color: ${props => props.theme.colors.textLight};
         cursor: default;
@@ -31,7 +31,7 @@ export const StyledPG = styled.p `
     flex-shrink: 0;
     font-size: clamp(0.9rem, 0.792rem + 0.492vw, 1.1rem);
     color: ${props => props.theme.colors.textLight};
-    cursor: default;
+    cursor: default;        
 `;
 
 export const StyledSeperator = styled.div`
@@ -39,6 +39,7 @@ export const StyledSeperator = styled.div`
     height: 6px;
     border-radius: 50%;
     background-color: ${props => props.theme.colors.clrAccent};
+    flex-shrink: 0;
 `;
 
 export const StyledReleaseYear = styled.p`

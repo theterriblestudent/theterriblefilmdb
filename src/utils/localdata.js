@@ -13,6 +13,32 @@ const movies = [
 
     },
     {
+        title: "Juijutsu Kaisen: 0",
+        trailer: "",
+        logo: "https://assets.fanart.tv/fanart/movies/810693/hdmovielogo/jujutsu-kaisen-0-the-movie-61a777b9626d2.png",
+        poster: "https://pbs.twimg.com/media/FIOfTZBWQAI-aQ2.jpg:large",
+        backdrop: "https://dthezntil550i.cloudfront.net/ij/latest/ij2112141637304780018232258/1280_960/6aa77888-a567-477d-aa5a-bef546eb97ae.png",
+        synopsis: "",
+        releaseYear: "2021",
+        score: "7.9",
+        rating: "PG-13",
+        runtime: "1h 45m"
+    },
+    {
+        title: "The Woman King",
+        trailer: "",
+        logo: "https://images.moviesanywhere.com/3e96a5dafef2a318efc6b61ea30946c6/682066ef-1dfd-4194-867c-d5e3eade2c69.png?r=2x1&w=300",
+        poster: "https://m.media-amazon.com/images/M/MV5BYWZkOTM0NTctMTUyYy00YTU4LWI4ZTUtNzAxOGVjN2U4ZDFmXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+        backdrop: "https://images4.alphacoders.com/127/1273995.jpg",
+        synopsis: "",
+        releaseYear: "2022",
+        score: "7.1",
+        rating: "PG-13",
+        runtime: "2h 15m"
+
+    },
+
+    {
         title: "Doctor Strange in the Multiverse of Madness",
         trailer: "",
         logo: "https://lumiere-a.akamaihd.net/v1/images/pp_doctorstrangeinthemultiverseofmadness_logo_22369_8f67633f.png",

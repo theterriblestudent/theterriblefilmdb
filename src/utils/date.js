@@ -21,3 +21,15 @@ export function getReleaseDate (release_date)  {
     releaseDateObject = new Date(release_date);
     return `${getMonthString(releaseDateObject.getMonth())} ${releaseDateObject.getDate()} ${releaseDateObject.getFullYear()}`;
   }
+
+  export function getRealeaseYear (release_date) {
+      let releaseDateObject;
+      releaseDateObject = new Date(release_date);
+      return releaseDateObject.getFullYear();
+  }
+
+  export function getRuntime(runtime) {
+      if (runtime < 60) return `${runtime}m`;
+      if (runtime === 60) return `1hr`;
+    return `${Math.floor(runtime/60)}h ${Math.ceil(runtime%60)}m`;
+  }

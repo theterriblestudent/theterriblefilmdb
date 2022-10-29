@@ -14,8 +14,8 @@ const theme = {
         secondaryFontStack: "'Barlow', sans-serif",
     },
     breakPoints: {
-        tablet: "768px",
-        mobile: "420px"
+        tablet: "968px",
+        mobile: "480px"
     },
     containers: {
         lg:  css`

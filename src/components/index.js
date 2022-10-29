@@ -16,12 +16,14 @@ import Title from './Title/Title';
 import {StyledLoader} from './Loader/Loader.styled';
 import Loader from "./Loader/Loader";
 import MediaCard from "./MediaCard/MediaCard";
-
+import Row from './Row/Row.styled';
+import Column from './Column/Column.styled';
+import PeoplesCard from "./PeoplesCard/PeoplesCard";
 export {GlobalStyle, StyledNav, NavBar, StyledLogo, StyledNavLinks, StyledLink,
         StyledForm, SearchForm, StyledInput, StyledSearchButton, StyledSearchIcon,
         StyledMobileNav, StyledBars, StyledButton, StyledOverlay, Container, StyledBriefMovieInfo,
         StyledRating, StyledSeperator, StyledPG, StyledReleaseYear, BriefMovieInfo, StyledRuntime,
         StyledContentStripe, ContentStripe, Title, StyledTitle, StyledTabButtons, StyledTitleText, SeeMoreButton, StyledChev,
         StyledControlsContainer, ControlCommonStyles, LeftScrollButton, RightScrollButton, Loader, StyledContentStripeContainer, StyledLoader,
-        MediaCard
+        MediaCard, Row, Column, PeoplesCard
 };

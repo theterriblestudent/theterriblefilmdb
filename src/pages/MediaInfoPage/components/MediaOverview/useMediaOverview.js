@@ -62,11 +62,9 @@ function useMediaOverview() {
                     }
             }
         }
-
-
     }
 
-    return {mediaInfo, ageRating};
+    return {mediaInfo, ageRating, media_type};
 
 }
 

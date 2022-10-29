@@ -3,7 +3,7 @@ import {FaChevronCircleRight, FaChevronCircleLeft} from 'react-icons/fa';
 
 export const StyledContentStripe = styled.div`
     position: relative;
-    top: -150px;
+    top: ${props => props.top};
     margin-bottom: clamp(1.875rem, 1.09375rem + 2.5vw, 2.8125rem);;
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         top: 0;
@@ -20,7 +20,7 @@ export const StyledControlsContainer = styled.div`
 export const StyledContentStripeContainer = styled.div`
     width: calc(100% - 12px);
     margin: auto;
-    padding: 15px 5%;
+    padding: ${ props => !props.no_default_container ? "15px 5%" : "15px 0" };
     overflow-x: scroll;
     position: relative;
     display: flex;
@@ -50,14 +50,14 @@ export const ControlCommonStyles = css`
 
 export const LeftScrollButton = styled(FaChevronCircleLeft)`
     ${ControlCommonStyles};
-    left: 5%;
+    left: ${props => props.no_default_container ? '0' : '5%'};
     transform: translate(-20px, -50%);
     &:hover {transform: translate(-20px, -50%) scale(1.1)}
 `;
 
 export const RightScrollButton = styled(FaChevronCircleRight)`
     ${ControlCommonStyles};
-    right: 5%;
+    right: ${props => props.no_default_container ? '0' : '5%'};
     transform: translate(20px, -50%);
     &:hover {transform: translate(20px, -50%) scale(1.1)}
 `;

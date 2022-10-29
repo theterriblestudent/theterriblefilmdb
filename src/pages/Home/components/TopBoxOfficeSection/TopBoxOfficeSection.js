@@ -6,7 +6,7 @@ function TopBoxOfficeSection() {
   let renders = React.useRef(1);
   React.useEffect(() => {console.log(renders.current++)})
   const {titleText, getContent} = useTopBoxOfficeSection("Top Box Office");
-  return <ContentStripe titleText={titleText} getContent={getContent} />;
+  return <ContentStripe top="-150px" titleText={titleText} getContent={getContent} />;
   
 }
 

@@ -18,7 +18,7 @@ function MediaCard(props) {
                         srcSet={props.backdrop_image ? `https://image.tmdb.org/t/p/w780${props.backdrop_image}` : no_backdrop_image}/>
                 <source media={`(max-width: ${theme.breakPoints.tablet})`}
                         srcSet={props.poster ? `https://image.tmdb.org/t/p/w342${props.poster}` : no_poster}/>
-                <img alt={"movie-poster"}/>
+                <img alt={"movie-poster"} onClick={() => seeMoreInfo()}/>
             </picture>
             <MobileReleaseDate>{getReleaseDate(props.release_date)}</MobileReleaseDate>
             <StyledMediaInfo>

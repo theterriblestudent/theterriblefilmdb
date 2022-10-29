@@ -6,10 +6,10 @@ import { useTheme } from 'styled-components';
 function BriefMovieInfo({ rating, releaseYear, runtime, PG}) {
     const theme = useTheme()
     return (
-        <StyledBriefMovieInfo gap="20px">
+        <StyledBriefMovieInfo gap="clamp(0.3125rem, -0.3571428571428571rem + 2.142857142857143vw, 1.25rem)">
             <StyledRating>
                 <AiFillStar size="1.8rem" color={theme.colors.clrAccent} />
-                <h1>{rating}</h1>
+                <h4>{Math.round(rating * 10) / 10}</h4>
             </StyledRating>
             <StyledSeperator />
             <StyledRuntime>{runtime}</StyledRuntime>

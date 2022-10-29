@@ -4,14 +4,14 @@ import {StyledContentStripe, Title, StyledControlsContainer,
 import composeHooks from 'react-hooks-compose';
 import useContentStripe from './useContentStripe';
     
-function ContentStripe ({data, getTabs, titleText, scrollLeft, scrollRight, getContent, id, scrollableContainer, title, buttonsRef}){
+function ContentStripe ({data, getTabs, titleText, scrollLeft, scrollRight, getContent, id, scrollableContainer, title, buttonsRef, top, no_default_container}){
     return (
-        <StyledContentStripe>
-            <Title buttonsRef={buttonsRef} title={title ? title : getTabs && getTabs()[0].title} titleText={titleText} getTabs={getTabs} hasMore />
+        <StyledContentStripe top={top || '0px'}>
+            <Title no_default_container={no_default_container} buttonsRef={buttonsRef} title={title ? title : getTabs && getTabs()[0].title} titleText={titleText} getTabs={getTabs} hasMore />
             <StyledControlsContainer id={id}>
-                <LeftScrollButton onClick={() => scrollLeft()} />
-                <RightScrollButton onClick={() => scrollRight()} />
-                <StyledContentStripeContainer ref={scrollableContainer}>
+                <LeftScrollButton no_default_container={no_default_container} onClick={() => scrollLeft()} />
+                <RightScrollButton no_default_container={no_default_container} onClick={() => scrollRight()} />
+                <StyledContentStripeContainer no_default_container={no_default_container} ref={scrollableContainer}>
                     {getContent(data)}                    
                 </StyledContentStripeContainer>       
             </StyledControlsContainer>

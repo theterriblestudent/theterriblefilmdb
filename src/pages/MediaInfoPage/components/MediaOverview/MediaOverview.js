@@ -1,12 +1,18 @@
 import React from 'react';
-import useMediaOverview from './useMediaOverview';
+import {BsPlusLg} from 'react-icons/bs';
+import { getRealeaseYear, getRuntime } from 'utils';
+import { useTheme } from 'styled-components';
 import composeHooks from 'react-hooks-compose';
-import {useTheme} from 'styled-components';
-import {OverviewImage, StyledOverviewContainer, OverviewContent} from './MediaOverview.styled';
+import { MEDIUM_POSTER } from 'utils/CONSTANTS';
+import useMediaOverview from './useMediaOverview';
+import { Credits } from './components';
+import { BriefMovieInfo, Column, Loader, Row, StyledButton, StyledLoader } from 'components';
+import { OverviewImage, StyledOverviewContainer, OverviewContent } from './MediaOverview.styled';
+import { StyledSynopsis, StyledMediaInfo } from './MediaOverview.styled';
 
-function MediaOverview({mediaInfo, getRatings}) {
+
+function MediaOverview({mediaInfo, ageRating, media_type, getDepartmentMembers}) {
     const theme = useTheme();
-
     return (
         <StyledOverviewContainer>
             <OverviewImage >
@@ -20,7 +26,34 @@ function MediaOverview({mediaInfo, getRatings}) {
                 </>}
             </OverviewImage>
             <OverviewContent>
-                
+                {(!mediaInfo) ? <StyledLoader /> : (
+                        <React.Fragment>
+                            <img src={`${MEDIUM_POSTER}/${mediaInfo.poster_path}`} alt="Poster" />
+                            <StyledMediaInfo>
+                                <h1>{(mediaInfo.title) ? mediaInfo.title : mediaInfo.name }</h1>
+                                <Row>
+                                    <StyledButton btnColor={theme.colors.lightButton} shrink>
+                                        <BsPlusLg color={theme.colors.clrAccent} />
+                                        <p>Watchlist</p>
+                                    </StyledButton>
+                                    {
+                                        (media_type === 'movie') ? <BriefMovieInfo rating={mediaInfo.vote_average}
+                                        releaseYear={getRealeaseYear(mediaInfo.release_date)}
+                                        runtime={getRuntime(mediaInfo.runtime)} PG={ageRating || 'NR'} /> :
+                                        <BriefMovieInfo rating={mediaInfo.vote_average} releaseYear={getRealeaseYear(mediaInfo.first_air_date)}
+                                        runtime={getRuntime(mediaInfo.episode_run_time[0])} PG={ageRating || 'NR'} />
+                                    }
+                                </Row>
+                                <h2>Overview</h2>
+                                <StyledSynopsis>
+                                    {mediaInfo.overview}
+                                </StyledSynopsis> 
+                                <Column gap="clamp(0.625rem, 0.1785714285714286rem + 1.4285714285714286vw, 1.25rem)">
+                                    <Credits values={getDepartmentMembers("Writing")} key="Writer"/>
+                                    {/* <Credits key={"Director"} values={getDepartmentMembers('Directing')} /> */}
+                                </Column> 
+                            </StyledMediaInfo>
+                        </React.Fragment>)}
             </OverviewContent>
         </StyledOverviewContainer>
     )

@@ -1,6 +1,6 @@
 import { useFetchMedia } from 'hooks'
 import React from 'react'
-import PeoplesCard from './components/PeoplesCard/PeoplesCard';
+import { PeoplesCard } from 'components';
 
 function usePopularPeoplesSection() {
     const titleText = React.useRef();

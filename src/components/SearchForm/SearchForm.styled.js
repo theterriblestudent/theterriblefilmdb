@@ -5,35 +5,36 @@ export const StyledForm = styled.form`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 250px;
-    height: 35px;
+    width: 270px;
+    height: 40px;
     border: 2px solid ${props => props.theme.colors.clrAccent};
-    border-radius: 100px;
-    padding: 3px 2px 3px 5px;
+    border-radius: 8px;
+    padding: 3px 3px 3px 5px;
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         display: ${props => (props.mobile ? "flex" : "none")};
     }
 `;
 
-export const StyledInput = styled.input.attrs({type: "text", placeholder: "search movies and tv"})`
+export const StyledInput = styled.input.attrs({type: "text", placeholder: "Search movies and tv"})`
     border: none;
     outline: none;
     color: ${props => props.theme.colors.textLight};
     height: 100%;
     flex: 1;
-    border-radius: 100px;
+    border-radius: 8px;
     padding: 0 5px;
     background: transparent;
 `
 
 export const StyledSearchButton = styled.div`
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
+    width: 28px;
+    height: 30px;
+    border-radius: 6px;
     background: ${props => props.theme.colors.bgDark};
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 `;
 
 export const StyledSearchIcon = styled(FaSearch)`

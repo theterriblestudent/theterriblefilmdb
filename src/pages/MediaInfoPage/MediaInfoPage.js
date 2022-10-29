@@ -1,10 +1,17 @@
-import React from 'react'
-import { MediaOverview } from 'pages/MediaInfoPage/components';
+import React from 'react';
+import composeHooks from 'react-hooks-compose';
+import useMediaInfoPage from './useMediaInfoPage';
+import { MediaOverview, Cast, RelatedMedia } from 'pages/MediaInfoPage/components';
 
-function MediaInfoPage() {
+function MediaInfoPage({data, getDepartmentMembers}) {
   return (
-    <MediaOverview />
-  )
+    <React.Fragment>
+      <MediaOverview getDepartmentMembers = {getDepartmentMembers}/>
+      <Cast data={data} />
+      <RelatedMedia />
+    </React.Fragment>
+  );
 }
 
-export default MediaInfoPage
+export default composeHooks({useMediaInfoPage})(MediaInfoPage);
+

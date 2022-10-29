@@ -53,9 +53,10 @@ const useNavBar = function(){
     function getLinks() {
         return (
             <React.Fragment>
-                <StyledLink onClick={handleNavLinkClick} to={BROWSE}>browse</StyledLink>
-                <StyledLink onClick={handleNavLinkClick} to={NEWS}>news</StyledLink>
-                <StyledButton btnColor={theme.colors.clrAccent} onClick={handleLoginButtonClick}>log in</StyledButton>
+                <StyledLink onClick={handleNavLinkClick} to={BROWSE}>Browse</StyledLink>
+                <StyledLink onClick={handleNavLinkClick} to={NEWS}>News</StyledLink>
+                <StyledLink onClick={handleNavLinkClick} to={NEWS}>About/Disclaimer</StyledLink>
+                <StyledButton btnColor={theme.colors.clrAccent} onClick={handleLoginButtonClick}>Sign Up</StyledButton>
             </React.Fragment>
         )
     }
