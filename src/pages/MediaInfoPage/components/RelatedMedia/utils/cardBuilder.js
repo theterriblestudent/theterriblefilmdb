@@ -9,7 +9,8 @@ function generateRelatedMediaCards(data) {
         data.results.map(related_media => {
             return (
                 <RelatedMediaCard image={ `${MEDIUM_POSTER}/${related_media.poster_path}` }
-                releaseDate={getReleaseDate(related_media.release_date || related_media.first_air_date)} />
+                releaseDate={getReleaseDate(related_media.release_date || related_media.first_air_date)}
+                media_id={related_media.id}/>
             );
         })
     );

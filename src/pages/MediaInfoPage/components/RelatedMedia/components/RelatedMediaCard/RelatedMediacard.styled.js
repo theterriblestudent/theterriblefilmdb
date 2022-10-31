@@ -4,6 +4,7 @@ export const StyledRelatedMediaCard = styled.div`
     width: 220px;
     height: auto;
     flex-shrink: 0;
+    cursor: pointer;
     img {
         width: 100%;
         margin-bottom: 20px;

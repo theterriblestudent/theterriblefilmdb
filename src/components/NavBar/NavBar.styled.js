@@ -9,7 +9,7 @@ export const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 3;
+    z-index: 99;
     transition: background 0.5s;
 `;
 
