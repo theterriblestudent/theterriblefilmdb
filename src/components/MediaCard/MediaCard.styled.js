@@ -16,6 +16,7 @@ export const StyledMediaCard = styled.div`
         border-radius: 5px 5px 0 0;
         @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
             border-radius: 8px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
         }
     }
 

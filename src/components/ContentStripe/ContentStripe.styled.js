@@ -4,9 +4,9 @@ import {FaChevronCircleRight, FaChevronCircleLeft} from 'react-icons/fa';
 export const StyledContentStripe = styled.div`
     position: relative;
     top: ${props => props.top};
-    margin-bottom: clamp(1.875rem, 1.09375rem + 2.5vw, 2.8125rem);;
+    margin-bottom: clamp(2.35rem, 2.0196rem + 1.05714vw, 2.8125rem);
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
-        top: 0;
+        top: 0px;
     } 
 `;
 

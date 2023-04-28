@@ -51,7 +51,7 @@ function useNowShowingSection() {
         return (
             data.map(media => {
                 return (
-                    <TrailerCard title={media.title || media.original_title || media.name || media.original_name} thumbnail={media.backdrop_path} media_id={media.id} />
+                    <TrailerCard title={media.title || media.original_title || media.name || media.original_name} backdrop={media.backdrop_path} poster={media.poster_path} thumbnail={media.backdrop_path} media_id={media.id} />
                 );
             })
         );

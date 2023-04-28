@@ -6,7 +6,8 @@ export const StyledWatchlistSection = styled.div`
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         margin-top: 20px;
         margin-bottom: 30px;
-    }
+        padding-top: 50px;
+        background-color: #0c0c0c;
 `;
 
 export const StyledWatchlistContainer = styled.div`

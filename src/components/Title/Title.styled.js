@@ -26,8 +26,11 @@ export const StyledTitleText = styled.div`
     }
     h1 {
         color: ${props => props.theme.colors.textLight};
-        font-size: 1.5rem;
-        font-size: clamp(1.5rem, 1.0909090909090908rem + 1.4545454545454546vw, 2rem);
+        @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+          color: #d1d1d1;
+        }
+        font-size: 1.4rem;
+        font-size: clamp(1.4rem, 0.9714285714285713rem + 1.3714285714285717vw, 2rem);
         transition: color 0.5s;
         cursor: pointer;
         &:hover {color: ${props => props.theme.colors.clrAccent};}
@@ -40,7 +43,7 @@ export const StyledChev = styled(BiChevronRight)`
     color: ${props => props.theme.colors.clrAccent};
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
         display: none;
-    }  
+    }
 `;
 
 export const StyledTabButtons = styled.div`
@@ -61,5 +64,5 @@ export const SeeMoreButton = styled(Link)`
     text-decoration: none;
     @media only screen and (min-width: ${props => props.theme.breakPoints.tablet}) {
         display: none;
-    } 
+    }
 `;

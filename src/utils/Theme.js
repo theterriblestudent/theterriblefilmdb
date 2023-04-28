@@ -2,10 +2,10 @@ import { css } from "styled-components";
 
 const theme = {
     colors: {
-        clrAccent: "#FF8A35",
+        clrAccent: "#c96d2a",
         bgDark: "#171717",
         bgLight: "#202020",
-        textLight: "#f4f4f4",
+        textLight: "#F4F4F4",
         textDark: "#b8b8b8",
         lightButton: "#505050",
     },
