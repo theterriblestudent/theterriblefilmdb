@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const StyledMediaCard = styled.div`
     background-color: ${props => props.theme.colors.bgLight};
     border-radius: 5px;
-    flex-basis: 360px;
+    flex-basis: clamp(9.375rem, 6.75rem + 13.125vw, 22.5rem);
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
     @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
-        flex-basis: 180px;
         background: transparent;
     }
     img {

@@ -49,8 +49,8 @@ function MediaOverview({mediaInfo, ageRating, media_type, getDepartmentMembers})
                                     {mediaInfo.overview}
                                 </StyledSynopsis> 
                                 <Column gap="clamp(0.625rem, 0.1785714285714286rem + 1.4285714285714286vw, 1.25rem)">
-                                    <Credits values={getDepartmentMembers("Writing")} key="Writer"/>
-                                    {/* <Credits key={"Director"} values={getDepartmentMembers('Directing')} /> */}
+                                    <Credits values={getDepartmentMembers("Writing")} value_key="Writer"/>
+                                    <Credits value_key="Director" values={getDepartmentMembers('Directing')} />
                                 </Column> 
                             </StyledMediaInfo>
                         </React.Fragment>)}

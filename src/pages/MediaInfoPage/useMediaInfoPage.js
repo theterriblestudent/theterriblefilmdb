@@ -9,10 +9,10 @@ function useMediaInfoPage() {
     function getDepartmentMembers(department) {
         let departmentMembers;
         if (data) {
-            departmentMembers = data.cast.filter(unit => unit.known_for_department === department);
-            departmentMembers = data.cast.map(member => member.name);
-            departmentMembers = Array.from(new Set(departmentMembers)).slice(0, 3);
-            return (departmentMembers.length > 0) ? departmentMembers : ["None"];
+            departmentMembers = data.crew.filter(unit => unit.known_for_department === department);
+            departmentMembers = departmentMembers.map(member => member.name);
+            departmentMembers = Array.from(new Set(departmentMembers)).slice(0, 2);
+            return (departmentMembers.length > 0) ? departmentMembers : ["N/A"];
         }
         return ["Loading..."];
     }

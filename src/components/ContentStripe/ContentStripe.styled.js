@@ -28,9 +28,8 @@ export const StyledContentStripeContainer = styled.div`
     justify-content: flex-start;
     min-height: 180px;
     scroll-behavior: smooth;
-    gap: 1.25rem;
-    gap: clamp(1.25rem, 0.45833333333333315rem + 2.533333333333334vw, 2.2rem);
-    align-items: flex-start;
+    gap: ${props => props.card_gap || 'clamp(1rem, 0.1428571rem + 2.742857vw, 2.2rem)'};
+    align-items: ${props => props.align || "flex-start"};
     &::-webkit-scrollbar {display: none;}
 `;
 

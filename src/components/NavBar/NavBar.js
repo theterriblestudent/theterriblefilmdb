@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import {StyledNav, StyledLogo, StyledNavLinks, SearchForm} from 'components';
 import {StyledMobileNav, StyledBars} from 'components'
 import { Outlet } from 'react-router-dom';
@@ -24,4 +24,4 @@ function NavBar({ navigateHome, handleBurgerClick, getLinks, nav}) {
     );
 };
 
-export default composeHooks({useNavBar})(NavBar);
+export default React.memo(composeHooks({useNavBar})(NavBar));

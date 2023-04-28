@@ -54,7 +54,8 @@ export const StyledTabButtons = styled.div`
 export const SeeMoreButton = styled(Link)`
     font-family: ${props => props.theme.fontStacks.secondaryFontStack};
     color: ${props => props.theme.colors.clrAccent};
-    font-size: 1rem;
+    font-size: 0.85rem;
+    font-size: clamp(0.85rem, 0.7428571428571428rem + 0.3428571428571429vw, 1rem);
     text-transform: uppercase;
     font-weight: 500;
     text-decoration: none;

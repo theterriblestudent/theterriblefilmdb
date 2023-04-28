@@ -6,8 +6,10 @@ function CastCard ({ profile_image, name, character }) {
     return(
         <StyledCastCard>
             <img src={profile_image ? `${MEDIUM_PFP}/${profile_image}` : no_profile_image} alt="Proflie"/>
-            <h4>{name}</h4>
-            <p>{character}</p>
+            <div>
+                <h4 title={name}>{name}</h4>
+                <p title={character}>{character}</p>
+            </div>
         </StyledCastCard>
     );
 }

@@ -20,7 +20,7 @@ function MediaCard(props) {
                         srcSet={props.poster ? `https://image.tmdb.org/t/p/w342${props.poster}` : no_poster}/>
                 <img alt={"movie-poster"} onClick={() => seeMoreInfo()}/>
             </picture>
-            <MobileReleaseDate>{getReleaseDate(props.release_date)}</MobileReleaseDate>
+            {/* <MobileReleaseDate>{getReleaseDate(props.release_date)}</MobileReleaseDate> */}
             <StyledMediaInfo>
                 <Title>{props.title}</Title>
                 <Genres>{getGenres()}</Genres>
