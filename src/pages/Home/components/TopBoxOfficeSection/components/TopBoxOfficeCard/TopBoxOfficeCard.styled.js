@@ -17,13 +17,13 @@ export const StyledBoxOfficeCard = styled.div`
         border-radius: 3px;
         top: 0;
         left: 0;
-        @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+        @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
             border-radius: 5px;
             box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
         }
     }
     &:last-child {margin-right: 0;}
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         box-shadow: none;
         &:first-child {margin-left: 120px;}
     }
@@ -37,19 +37,19 @@ export const StyledPositionNumber = styled.div`
     width: clamp(65px, 4.8vw, 90px);
     height: clamp(65px, 4.8vw, 90px);
     border-radius: 50%;
-    background: ${props => props.theme.colors.bgDark};
-    border: 3px solid ${props => props.theme.colors.clrAccent};
+    background: ${props => props.theme.colors.dark_background};
+    border: 3px solid ${props => props.theme.colors.accent};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     h1 {
         font-size: clamp(3rem, 3.2vw, 3.8rem);
-        font-weight: 1000;   
-        font-family: ${props => props.theme.fontStacks.secondaryFontStack};
+        font-weight: 1000;
+        font-family: ${props => props.theme.font_stacks.secondary};
         color: transparent;
         text-align: center;
-        -webkit-text-stroke: 3px ${props => props.theme.colors.clrAccent};
+        -webkit-text-stroke: 3px ${props => props.theme.colors.accent};
     }
 `;
 
@@ -66,7 +66,7 @@ export const StyledGrossAmount = styled.div`
     bottom: 0;
     left: 0;
     height: 50px;
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}){
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}){
         opacity: 1;
         border-radius: 0 0 5px 5px;
     }
@@ -74,7 +74,7 @@ export const StyledGrossAmount = styled.div`
         position: relative;
         font-size: 1.125rem;
         font-weight: bold;
-        color: ${props => props.theme.colors.clrAccent};
+        color: ${props => props.theme.colors.accent};
     }
 `;
 
@@ -90,5 +90,5 @@ export const StyledGrossOverlay = styled.div`
     backdrop-filter: blur( 9.5px );
     -webkit-backdrop-filter: blur( 9.5px );
     border-radius: 10px;
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {border-radius: 0 0 5px 5px;}
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {border-radius: 0 0 5px 5px;}
 `;

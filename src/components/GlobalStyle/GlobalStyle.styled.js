@@ -7,15 +7,15 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        background-color: ${props => props.theme.colors.bgDark};
+        background-color: ${props => props.theme.colors.dark_background};
     }
     body::-webkit-scrollbar {
         width: .9rem;
-        background-color: ${props => props.theme.colors.bgLight};
+        background-color: ${props => props.theme.colors.light_background};
     }
 
     body::-webkit-scrollbar-thumb {
-        background-color: ${props => props.theme.colors.clrAccent};
+        background-color: ${props => props.theme.colors.accent};
     }
 
     #now-showing-section {

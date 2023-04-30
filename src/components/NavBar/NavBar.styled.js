@@ -29,18 +29,18 @@ export const StyledNavLinks = styled.ul`
     align-items: center;
     flex: 1;
     height: 100%;
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {display: none}
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {display: none}
 `;
 
 export const StyledLink = styled(Link)`
-    color: ${props => props.theme.colors.textLight};
-    font-family: ${props => props.theme.fontStacks.secondaryFontStack};
+    color: ${props => props.theme.colors.light_text};
+    font-family: ${props => props.theme.font_stacks.secondary};
     text-decoration: none;
     transition: color 0.5s;
     font-weight: 600;
     font-size: 1.1875rem;
-    &:hover {color: ${props => props.theme.colors.clrAccent}}
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    &:hover {color: ${props => props.theme.colors.accent}}
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         text-transform: uppercase;
     }
 `;
@@ -53,23 +53,23 @@ export const StyledMobileNav = styled.ul.attrs({className: "mobile-nav"})`
     right: -100%;
     transition: right 0.55s;
     transition-timing-function: ease-in-out;
-    background-color: ${props => props.theme.colors.bgDark};
+    background-color: ${props => props.theme.colors.dark_background};
     display: none;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
     align-items: center;
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         display: flex;
     }
 `;
 
 export const StyledBars = styled(GoThreeBars)`
-    color: ${props => props.theme.colors.clrAccent};
+    color: ${props => props.theme.colors.accent};
     font-size: 1.6rem;
     display: none;
     z-index: 3;
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         display: block;
     }
 `;

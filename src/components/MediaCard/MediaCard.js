@@ -14,9 +14,9 @@ function MediaCard(props) {
     return (
         <StyledMediaCard>
             <picture>
-                <source media={`(min-width: ${theme.breakPoints.tablet})`}
+                <source media={`(min-width: ${theme.breakpoints.tablet})`}
                         srcSet={props.backdrop_image ? `https://image.tmdb.org/t/p/w780${props.backdrop_image}` : no_backdrop_image}/>
-                <source media={`(max-width: ${theme.breakPoints.tablet})`}
+                <source media={`(max-width: ${theme.breakpoints.tablet})`}
                         srcSet={props.poster ? `https://image.tmdb.org/t/p/w342${props.poster}` : no_poster}/>
                 <img alt={"movie-poster"} onClick={() => seeMoreInfo()}/>
             </picture>
@@ -26,11 +26,11 @@ function MediaCard(props) {
                 <Genres>{getGenres()}</Genres>
                 <ReleaseDate>{getReleaseDate(props.release_date)}</ReleaseDate>
                 <Buttons>
-                    <StyledButton btnColor={theme.colors.lightButton}>
-                        <BsPlusLg color={theme.colors.clrAccent} /> Watchlist
+                    <StyledButton btnColor={theme.colors.light_button}>
+                        <BsPlusLg color={theme.colors.accent} /> Watchlist
                     </StyledButton>
-                    <StyledButton btnColor={theme.colors.bgDark} onClick={() => seeMoreInfo()}>
-                        <AiFillInfoCircle color={theme.colors.textLight} />  More Info
+                    <StyledButton btnColor={theme.colors.dark_background} onClick={() => seeMoreInfo()}>
+                        <AiFillInfoCircle color={theme.colors.light_text} />  More Info
                     </StyledButton>
                 </Buttons>
             </StyledMediaInfo>

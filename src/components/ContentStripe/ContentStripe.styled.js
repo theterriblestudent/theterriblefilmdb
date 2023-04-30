@@ -5,9 +5,9 @@ export const StyledContentStripe = styled.div`
     position: relative;
     top: ${props => props.top};
     margin-bottom: clamp(2.35rem, 2.0196rem + 1.05714vw, 2.8125rem);
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         top: 0px;
-    } 
+    }
 `;
 
 export const StyledControlsContainer = styled.div`
@@ -36,13 +36,13 @@ export const StyledContentStripeContainer = styled.div`
 export const ControlCommonStyles = css`
     font-size: 1.5rem;
     font-size: clamp(1.5rem, 0.5094339622641506rem + 3.5220125786163536vw, 2.2rem);
-    color: ${props => props.theme.colors.clrAccent};
+    color: ${props => props.theme.colors.accent};
     transition: transform 0.5s;
     position: absolute;
     cursor: pointer;
     z-index: 5;
     top: 50%;
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         display: none;
     }
 `;

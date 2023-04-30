@@ -10,7 +10,7 @@ export const StyledLoader = styled.div`
     height: 50px;
     padding: 3px;
     border: 3px transparent solid;
-    border-top: 3px ${props => props.theme.colors.clrAccent} solid;
+    border-top: 3px ${props => props.theme.colors.accent} solid;
     position: absolute;
     border-radius: 50%;
     top: 50%;

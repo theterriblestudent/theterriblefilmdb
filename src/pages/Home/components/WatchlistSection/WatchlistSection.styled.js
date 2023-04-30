@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledWatchlistSection = styled.div`
     margin-top: -135px;
     margin-bottom: 180px;
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         margin-top: 20px;
         margin-bottom: 30px;
         padding-top: 50px;
@@ -11,7 +11,7 @@ export const StyledWatchlistSection = styled.div`
 `;
 
 export const StyledWatchlistContainer = styled.div`
-    ${props => props.theme.containers.lg};
+    ${props => props.theme.containers.large};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,8 +22,8 @@ export const StyledWatchlistContainer = styled.div`
 `;
 
 export const StyledLoginText = styled.p`
-    color: ${props => props.theme.colors.textDark};
-    font-family: ${props => props.theme.fontStacks.secondaryFontStack};
+    color: ${props => props.theme.colors.dark_text};
+    font-family: ${props => props.theme.font_stacks.secondary};
     font-weight: 500;
     text-align: center;
     margin-bottom: 30px;

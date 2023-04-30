@@ -20,7 +20,7 @@ function JoinSection() {
                     on TV or available on popular streaming services like Netflix, Amazon Prime Video,
                     ShowMax, and Mubi.
                   </p>
-                  <StyledButton as="a" href="#" btnColor={theme.colors.clrAccent}>Join</StyledButton>
+                  <StyledButton as="a" href="#" btnColor={theme.colors.accent}>Join</StyledButton>
               </JoinText>
               <ul>
                 <li>Enjoy TMDB ad free</li>

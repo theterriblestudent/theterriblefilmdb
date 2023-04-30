@@ -16,11 +16,11 @@ function MediaOverview({mediaInfo, ageRating, media_type, getDepartmentMembers})
     return (
         <StyledOverviewContainer>
             <OverviewImage >
-                {mediaInfo && 
+                {mediaInfo &&
                 <>
-                    <source media={`(min-width: ${theme.breakPoints.tablet})`}
+                    <source media={`(min-width: ${theme.breakpoints.tablet})`}
                         srcSet={`https://image.tmdb.org/t/p/w1280${mediaInfo.backdrop_path}`} />
-                    <source media={`(max-width: ${theme.breakPoints.tablet})`} 
+                    <source media={`(max-width: ${theme.breakpoints.tablet})`}
                         srcSet={`https://image.tmdb.org/t/p/w500${mediaInfo.poster_path}`} />
                     <img alt={`Movie Poster.`}/>
                 </>}
@@ -32,8 +32,8 @@ function MediaOverview({mediaInfo, ageRating, media_type, getDepartmentMembers})
                             <StyledMediaInfo>
                                 <h1>{(mediaInfo.title) ? mediaInfo.title : mediaInfo.name }</h1>
                                 <Row>
-                                    <StyledButton btnColor={theme.colors.lightButton} shrink>
-                                        <BsPlusLg color={theme.colors.clrAccent} />
+                                    <StyledButton btnColor={theme.colors.light_button} shrink>
+                                        <BsPlusLg color={theme.colors.accent} />
                                         <p>Watchlist</p>
                                     </StyledButton>
                                     {
@@ -47,11 +47,11 @@ function MediaOverview({mediaInfo, ageRating, media_type, getDepartmentMembers})
                                 <h2>Overview</h2>
                                 <StyledSynopsis>
                                     {mediaInfo.overview}
-                                </StyledSynopsis> 
-                                <Column gap="clamp(0.625rem, 0.1785714285714286rem + 1.4285714285714286vw, 1.25rem)">
+                                </StyledSynopsis>
+                                <Column gap="clamp(0.625rem, 0.179rem + 1.429vw, 1.25rem)">
                                     <Credits values={getDepartmentMembers("Writing")} value_key="Writer"/>
                                     <Credits value_key="Director" values={getDepartmentMembers('Directing')} />
-                                </Column> 
+                                </Column>
                             </StyledMediaInfo>
                         </React.Fragment>)}
             </OverviewContent>

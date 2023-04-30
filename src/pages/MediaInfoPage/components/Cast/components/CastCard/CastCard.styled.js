@@ -6,7 +6,7 @@ export const StyledCastCard = styled.div`
     border-radius: 8px;
     padding-bottom: 15px;
     flex-shrink: 0;
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         width: 125px;
     }
 
@@ -19,13 +19,13 @@ export const StyledCastCard = styled.div`
         object-position: top;
         border-radius: 8px 8px 0 0;
         margin-bottom: 8px;
-        @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+        @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         height: 135px;
         }
     }
     h4 {
-        font-family: ${props => props.theme.fontStacks.primaryFontStack};
-        color: ${props => props.theme.colors.textLight};
+        font-family: ${props => props.theme.font_stacks.primary};
+        color: ${props => props.theme.colors.light_text};
         font-size: 0.9375rem;
         font-size: clamp(0.9375rem, 0.8482142857142857rem + 0.2857142857142857vw, 1.0625rem);
         text-align: start;
@@ -39,8 +39,8 @@ export const StyledCastCard = styled.div`
 
     }
     p {
-        font-family: ${props => props.theme.fontStacks.secondaryFontStack};
-        color: ${props => props.theme.colors.textDark};
+        font-family: ${props => props.theme.font_stacks.secondaryFontStack};
+        color: ${props => props.theme.colors.dark_text};
         font-size: 0.875rem;
         font-size: clamp(0.875rem, 0.7857142857142857rem + 0.2857142857142857vw, 1rem);
         white-space: nowrap;

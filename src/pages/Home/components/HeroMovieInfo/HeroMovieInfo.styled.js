@@ -15,7 +15,7 @@ export const StyledMovieInfo = styled.div`
 
     img { width: 100%;}
 
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
         top: unset;
         bottom: 30px;
         left: 50%;

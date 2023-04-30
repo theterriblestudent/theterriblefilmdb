@@ -5,7 +5,8 @@ import { useFetchMedia } from 'hooks';
 
 function useRelatedMedia() {
     const {media_type, media_id} = useParams();
-    const data = useFetchMedia(`https://api.themoviedb.org/3/${media_type}/${media_id}/similar?api_key=f4b38564562890f30d78269e51e393a2&language=en-US&page=1`);
+    const {REACT_APP_API_KEY_TMDB: API_KEY_TMDB} = process.env;
+    const data = useFetchMedia(`https://api.themoviedb.org/3/${media_type}/${media_id}/similar?api_key=${API_KEY_TMDB}&language=en-US&page=1`);
 
     const titleText = React.useRef();
 

@@ -2,9 +2,14 @@ import { useTheme } from 'styled-components';
 
 function useTrailerCard(trailerImage) {
     const theme = useTheme();
+
+    /*
+     * This function changes the nowShowingSection's background image to the backdrop
+     * image of the movie/tv-show that was hovered on.
+     */
     function handleMouseOver() {
         const bg = document.querySelector('.now-showing-bg-image');
-        if(document.documentElement.clientWidth < theme.breakPoints.tablet || trailerImage === bg.src)
+        if(document.documentElement.clientWidth < theme.breakpoints.tablet || trailerImage === bg.src)
             return;
         bg.classList.add('transparent');
         window.setTimeout(() => {

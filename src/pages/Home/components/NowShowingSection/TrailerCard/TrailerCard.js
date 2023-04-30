@@ -11,9 +11,9 @@ function TrailerCard({backdrop, poster, title, description="Trailer"}) {
         <StyledTrailerCard onMouseEnter={handleMouseOver}>
             <VideoThumbnail>
                 <picture>
-                  <source media={`(min-width: ${theme.breakPoints.tablet})`}
+                  <source media={`(min-width: ${theme.breakpoints.tablet})`}
                           srcSet={backdrop ? `https://image.tmdb.org/t/p/w780${backdrop}` : no_backdrop_image} />
-                  <source media={`(max-width: ${theme.breakPoints.tablet})`}
+                  <source media={`(max-width: ${theme.breakpoints.tablet})`}
                           srcSet={poster ? `https://image.tmdb.org/t/p/w342${poster}` : no_poster} />
                   <img alt={`${title}`} />
                 </picture>

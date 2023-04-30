@@ -12,9 +12,9 @@ export const StyledRelatedMediaCard = styled.div`
         border-radius: 5px;
     }
     p {
-        font-family: ${props => props.theme.fontStacks.secondaryFontStack};
-        color: ${props => props.theme.colors.textDark};
+        font-family: ${props => props.theme.font_stacks.secondary};
+        color: ${props => props.theme.colors.dark_text};
         font-size: 0.9rem;
-        font-size: clamp(0.9rem, 0.8285714285714286rem + 0.2285714285714285vw, 1rem);
+        font-size: clamp(0.9rem, 0.829rem + 0.229vw, 1rem);
     }
 `;

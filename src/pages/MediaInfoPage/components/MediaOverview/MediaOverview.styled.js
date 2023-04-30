@@ -31,7 +31,7 @@ export const OverviewImage = styled.picture`
 
 export const OverviewContent = styled.div`
     position: relative;
-    ${props => props.theme.containers.sm};
+    ${props => props.theme.containers.small};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,9 +40,9 @@ export const OverviewContent = styled.div`
     padding-top: 110px;
 
     img {
-        width: clamp(16.875rem, 15.535714285714286rem + 4.285714285714286vw, 18.75rem);
-        border-radius: 3px; 
-        @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}){
+        width: clamp(16.875rem, 15.536rem + 4.286vw, 18.75rem);
+        border-radius: 3px;
+        @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}){
             display: none;
         }
     }
@@ -56,8 +56,8 @@ export const StyledMediaInfo = styled.div`
     gap: 1.5rem;
 
     h1, h2 {
-        color: ${props => props.theme.colors.textLight};
-        font-family: ${props => props.theme.fontStacks.primaryFontStack};
+        color: ${props => props.theme.colors.light_text};
+        font-family: ${props => props.theme.font_stacks.primary};
         font-weight: bold;
     }
     h1 {
@@ -66,8 +66,8 @@ export const StyledMediaInfo = styled.div`
     }
     h2 {
         font-size: 1.45rem;
-        font-size: clamp(1.45rem, 1.1285714285714286rem + 1.0285714285714285vw, 1.9rem);
-        @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}) {
+        font-size: clamp(1.45rem, 1.129rem + 1.029vw, 1.9rem);
+        @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}) {
             margin-bottom: -12px;
             margin-top: 7px;
         }
@@ -75,14 +75,13 @@ export const StyledMediaInfo = styled.div`
 `;
 
 export const StyledSynopsis = styled.p`
-    font-family: ${props => props.theme.fontStacks.secondaryFontStack};
-    color: ${props => props.theme.colors.textLight};
+    font-family: ${props => props.theme.font_stacks.secondary};
+    color: ${props => props.theme.colors.light_text};
     font-size: 1rem;
     max-width: 95%;
-    font-size: clamp(1rem, 0.9107142857142857rem + 0.2857142857142857vw, 1.125rem);
+    font-size: clamp(1rem, 0.911rem + 0.286vw, 1.125rem);
 
-    @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}){
+    @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}){
         line-height: 1.6rem;
     }
 `;
-

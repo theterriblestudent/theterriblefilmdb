@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledBackground = styled.div`
     width: 100%;
     height: 100%;
-    position: relative; 
+    position: relative;
 `;
 
 export const BackgroundImage = styled.picture`
@@ -14,7 +14,7 @@ export const BackgroundImage = styled.picture`
         height: 100%;
         object-fit: cover;
         object-position: center;
-        @media only screen and (max-width: ${props => props.theme.breakPoints.tablet}){
+        @media only screen and (max-width: ${props => props.theme.breakpoints.tablet}){
             object-position: top;
         }
     }

@@ -4,6 +4,7 @@ import {useFetchMedia} from 'hooks';
 function useTopBoxOfficeCard(id) {
     const grossElement = React.useRef();
     const thisCard = React.useRef()
+    const {REACT_APP_API_KEY_TMDB: API_KEY_TMDB} = process.env;
 
     const handleMouseOver = () => {grossElement.current.style.opacity = 1;}
     const handleMouseLeave = () => {grossElement.current.style.opacity = 0}
@@ -21,7 +22,7 @@ function useTopBoxOfficeCard(id) {
         }
     }, []);
 
-    const data = useFetchMedia(`https://api.themoviedb.org/3/find/${id}?api_key=f4b38564562890f30d78269e51e393a2&language=en-US&external_source=imdb_id`);
+    const data = useFetchMedia(`https://api.themoviedb.org/3/find/${id}?api_key=${API_KEY_TMDB}&language=en-US&external_source=imdb_id`);
 
     return {data, grossElement, thisCard};
 }

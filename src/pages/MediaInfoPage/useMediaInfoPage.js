@@ -4,15 +4,16 @@ import {useParams} from 'react-router-dom';
 
 function useMediaInfoPage() {
     const { media_id, media_type } = useParams();
-    const data = useFetchMedia(`https://api.themoviedb.org/3/${media_type}/${media_id}/credits?api_key=f4b38564562890f30d78269e51e393a2&language=en-US`);
+    const {REACT_APP_API_KEY_TMDB: API_KEY_TMDB} = process.env;
+    const data = useFetchMedia(`https://api.themoviedb.org/3/${media_type}/${media_id}/credits?api_key=${API_KEY_TMDB}&language=en-US`);
 
     function getDepartmentMembers(department) {
         let departmentMembers;
         if (data) {
-            departmentMembers = data.crew.filter(unit => unit.known_for_department === department);
-            departmentMembers = departmentMembers.map(member => member.name);
-            departmentMembers = Array.from(new Set(departmentMembers)).slice(0, 2);
-            return (departmentMembers.length > 0) ? departmentMembers : ["N/A"];
+            departmentMembers = Array.from(new Set(
+                data.crew.filter(unit => unit.known_for_department === department)
+                .map(member => member.name)));
+            return (departmentMembers.length > 0) ? departmentMembers.slice(0, 2) : ["N/A"];
         }
         return ["Loading..."];
     }

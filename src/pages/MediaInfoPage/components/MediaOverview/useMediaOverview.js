@@ -14,24 +14,26 @@ import { useFetchMedia } from 'hooks';
 function useMediaOverview() {
     const {media_type, media_id} = useParams();
     const [ratingsContainer, setRatingsContainer] = React.useState(null);
-    const mediaInfo = useFetchMedia(`https://api.themoviedb.org/3/${media_type}/${media_id}?api_key=f4b38564562890f30d78269e51e393a2&language=en-US`);
+    const {REACT_APP_API_KEY_TMDB: API_KEY_TMDB} = process.env;
+    const {REACT_APP_API_KEY_IP_LOOKUP: API_KEY_IP_LOOK_UP} = process.env;
+    const mediaInfo = useFetchMedia(`https://api.themoviedb.org/3/${media_type}/${media_id}?api_key=${API_KEY_TMDB}&language=en-US`);
     const [countryCode, setCountryCode] = React.useState(null);
     const [ageRating, setAgeRating] = React.useState('NR');
 
     React.useEffect(() => {
 
-        fetch('https://extreme-ip-lookup.com/json/?key=1lJK3nb07ilkdyWbd2ki')
+        fetch(`https://extreme-ip-lookup.com/json/?key=${API_KEY_IP_LOOK_UP}`)
             .then(response => response.json())
             .then(data => setCountryCode(data.countryCode))
             .catch(error => {
                 console.error(error, error.stack);
                 setCountryCode('US');
             })
-            
-        if(media_type === 'tv') 
-            getRatingsContainer(`https://api.themoviedb.org/3/tv/${media_id}/content_ratings?api_key=f4b38564562890f30d78269e51e393a2`);
+
+        if(media_type === 'tv')
+            getRatingsContainer(`https://api.themoviedb.org/3/tv/${media_id}/content_ratings?api_key=${API_KEY_TMDB}`);
         if (media_type === 'movie')
-            getRatingsContainer(`https://api.themoviedb.org/3/movie/${media_id}/release_dates?api_key=f4b38564562890f30d78269e51e393a2`);
+            getRatingsContainer(`https://api.themoviedb.org/3/movie/${media_id}/release_dates?api_key=${API_KEY_TMDB}`);
     }, [media_type, media_id]);
 
     React.useEffect(() => {
