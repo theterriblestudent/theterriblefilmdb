@@ -17,7 +17,7 @@ function Home () {
             <TopRatedTVSection />
             <PopularMoviesSection />
             <PopularTVShowsSection />
-            {/* <TopBoxOfficeSection /> */}
+            { /* <TopBoxOfficeSection /> */} 
             <PopularPeopleSection />
             <JoinSection />
         </Fragment>
