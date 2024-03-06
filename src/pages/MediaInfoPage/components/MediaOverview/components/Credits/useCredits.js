@@ -8,6 +8,7 @@ function useCredits() {
         values.map((value, index) => {
             if (index === 0) {
                 stringConcatenatedValues = `${value}`;
+                //eslint-disable-next-line
                 return;
             };
             stringConcatenatedValues = `${stringConcatenatedValues}, ${value}`;
