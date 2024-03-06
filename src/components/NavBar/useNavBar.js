@@ -1,5 +1,5 @@
 import React from 'react';
-import { HOME, NEWS, LOGIN, BROWSE } from "navigation/CONSTANTS";
+import { HOME, NEWS, BROWSE } from "navigation/CONSTANTS";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "styled-components";
 import { StyledLink, StyledButton } from 'components';

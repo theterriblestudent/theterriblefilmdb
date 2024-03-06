@@ -6,7 +6,7 @@ import {StyledButton} from 'components';
 import {AiFillInfoCircle} from 'react-icons/ai';
 import {BsPlusLg} from 'react-icons/bs';
 import {ReleaseDate, Buttons, Genres} from './MediaCard.styled';
-import {StyledMediaCard, StyledMediaInfo, Title, MobileReleaseDate} from './MediaCard.styled';
+import {StyledMediaCard, StyledMediaInfo, Title} from './MediaCard.styled';
 
 function MediaCard(props) {
     const theme = useTheme();

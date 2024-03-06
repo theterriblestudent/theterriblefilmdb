@@ -1,4 +1,4 @@
-import { Container, ContentStripe } from "components";
+import { ContentStripe } from "components";
 import { CastContainer } from './Cast.styled';
 import useCast from "./useCast";
 

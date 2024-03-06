@@ -34,10 +34,12 @@ function useMediaOverview() {
             getRatingsContainer(`https://api.themoviedb.org/3/tv/${media_id}/content_ratings?api_key=${API_KEY_TMDB}`);
         if (media_type === 'movie')
             getRatingsContainer(`https://api.themoviedb.org/3/movie/${media_id}/release_dates?api_key=${API_KEY_TMDB}`);
-    }, [media_type, media_id]);
+            //eslint-disable-next-line
+        }, [media_type, media_id]);
 
     React.useEffect(() => {
         getRatings();
+        //eslint-disable-next-line
     }, [ratingsContainer, countryCode]);
 
 

@@ -12,7 +12,7 @@ function useRelatedMedia() {
 
     React.useEffect(() => {
         titleText.current.innerText = `Similar ${(media_type === 'tv') ? "TV Shows" : "Movies"}`;
-    }, []);
+    }, [media_type]);
 
     function getContent() {
         if (data) return generateRelatedMediaCards(data);

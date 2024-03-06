@@ -1,4 +1,3 @@
-import { AiFillPropertySafety } from 'react-icons/ai';
 import styled, { css } from 'styled-components';
 
 export const StyledButton = styled.button`

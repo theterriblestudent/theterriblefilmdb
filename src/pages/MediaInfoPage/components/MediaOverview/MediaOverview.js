@@ -6,7 +6,7 @@ import composeHooks from 'react-hooks-compose';
 import { MEDIUM_POSTER } from 'utils/CONSTANTS';
 import useMediaOverview from './useMediaOverview';
 import { Credits } from './components';
-import { BriefMovieInfo, Column, Loader, Row, StyledButton, StyledLoader } from 'components';
+import { BriefMovieInfo, Column, Row, StyledButton, StyledLoader } from 'components';
 import { OverviewImage, StyledOverviewContainer, OverviewContent } from './MediaOverview.styled';
 import { StyledSynopsis, StyledMediaInfo } from './MediaOverview.styled';
 

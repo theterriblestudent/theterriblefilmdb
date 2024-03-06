@@ -1,6 +1,5 @@
 import React from 'react';
 import { CastCard } from 'pages/MediaInfoPage/components/Cast/components';
-import {MEDIUM_PFP} from 'utils/CONSTANTS';
 
 function useCast(data) {
     const titleText = React.useRef();
